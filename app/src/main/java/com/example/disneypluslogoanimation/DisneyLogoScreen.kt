@@ -28,7 +28,7 @@ fun DisneyLogoAnimation() {
     val sweepAngle = 135f
     val animationDuration = 1000
     val plusAnimationDuration = 300
-    val animationDelay = 0
+    val animationDelay = 100
     var animationPlayed by remember {
         mutableStateOf(false)
     }
@@ -52,7 +52,7 @@ fun DisneyLogoAnimation() {
         targetValue = if (plusAnimationPlayed) 1f else 0f,
         animationSpec = tween(
             durationMillis = plusAnimationDuration,
-            delayMillis = animationDelay
+            delayMillis = 0
         )
     )
 
